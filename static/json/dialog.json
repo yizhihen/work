@@ -1,0 +1,24 @@
+{
+    "data": [
+        {"name": "王小二", "id": 1, "avatar": "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3054730122,3618781773&fm=27&gp=0.jpg", "msg": "对话内容1"},
+        {"name": "王小二", "id": 1, "avatar": "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3054730122,3618781773&fm=27&gp=0.jpg", "msg": "对话内容2"},
+        {"name": "鸡蛋哥", "id": 0, "avatar": "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3054730122,3618781773&fm=27&gp=0.jpg", "msg": "对话内容3"},
+        {"name": "王小二", "id": 1, "avatar": "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3054730122,3618781773&fm=27&gp=0.jpg", "msg": "对话内容4"},
+        {"name": "鸡蛋哥", "id": 0, "avatar": "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3054730122,3618781773&fm=27&gp=0.jpg", "msg": "对话内容5"},
+        {"name": "王小二", "id": 1, "avatar": "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3054730122,3618781773&fm=27&gp=0.jpg", "msg": "对话内容6"},
+        {"name": "王小二", "id": 1, "avatar": "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3054730122,3618781773&fm=27&gp=0.jpg", "msg": "对话内容7"},
+        {"name": "鸡蛋哥", "id": 0, "avatar": "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3054730122,3618781773&fm=27&gp=0.jpg", "msg": "对话内容8"},
+        {"name": "鸡蛋哥", "id": 0, "avatar": "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3054730122,3618781773&fm=27&gp=0.jpg", "msg": "对话内容9"},
+        {"name": "鸡蛋哥", "id": 0, "avatar": "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3054730122,3618781773&fm=27&gp=0.jpg", "msg": "对话内容10"},
+        {"name": "王小二", "id": 1, "avatar": "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3054730122,3618781773&fm=27&gp=0.jpg", "msg": "对话内容11"},
+        {"name": "鸡蛋哥", "id": 0, "avatar": "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3054730122,3618781773&fm=27&gp=0.jpg", "msg": "对话内容12"},
+        {"name": "王小二", "id": 1, "avatar": "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3054730122,3618781773&fm=27&gp=0.jpg", "msg": "对话内容13"},
+        {"name": "鸡蛋哥", "id": 0, "avatar": "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3054730122,3618781773&fm=27&gp=0.jpg", "msg": "对话内容14"},
+        {"name": "王小二", "id": 1, "avatar": "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3054730122,3618781773&fm=27&gp=0.jpg", "msg": "对话内容15"},
+        {"name": "鸡蛋哥", "id": 0, "avatar": "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3054730122,3618781773&fm=27&gp=0.jpg", "msg": "对话内容16"},
+        {"name": "王小二", "id": 1, "avatar": "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3054730122,3618781773&fm=27&gp=0.jpg", "msg": "对话内容17"},
+        {"name": "鸡蛋哥", "id": 0, "avatar": "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3054730122,3618781773&fm=27&gp=0.jpg", "msg": "对话内容18"},
+        {"name": "王小二", "id": 1, "avatar": "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3054730122,3618781773&fm=27&gp=0.jpg", "msg": "对话内容19"},
+        {"name": "鸡蛋哥", "id": 0, "avatar": "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3054730122,3618781773&fm=27&gp=0.jpg", "msg": "对话内容20"}
+    ]
+}

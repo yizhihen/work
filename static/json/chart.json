@@ -1,0 +1,30 @@
+{
+    "contact": [
+        {"header": "总经办","child": [{"id": 1,"sign": "面朝大海，春暖花开","name": "鸡蛋哥0","avatar": "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3054730122,3618781773&fm=27&gp=0.jpg"}]},
+        {"header": "调研处","child": [
+            {"id": 2,"sign": "铁头娃的世界没有磁铁","name": "鸡蛋哥1","avatar": "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3054730122,3618781773&fm=27&gp=0.jpg"},
+            {"id": 3,"sign": "","name": "王小二","avatar": "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3054730122,3618781773&fm=27&gp=0.jpg"},
+            {"id": 4,"sign": "","name": "李四","avatar": "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3054730122,3618781773&fm=27&gp=0.jpg"}
+        ]},
+        {"header": "财务部","child": [{"id": 5,"sign": "","name": "鸡蛋哥2","avatar": "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3054730122,3618781773&fm=27&gp=0.jpg"}]},
+        {"header": "人事部","child": [{"id": 6,"sign": "","name": "鸡蛋哥3","avatar": "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3054730122,3618781773&fm=27&gp=0.jpg"}]},
+        {"header": "办公室","child": [{"id": 7,"sign": "","name": "鸡蛋哥4","avatar": "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3054730122,3618781773&fm=27&gp=0.jpg"}]},
+        {"header": "安质部","child": [{"id": 8,"sign": "","name": "鸡蛋哥5","avatar": "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3054730122,3618781773&fm=27&gp=0.jpg"}]},
+        {"header": "材料部","child": [{"id": 9,"sign": "","name": "鸡蛋哥2","avatar": "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3054730122,3618781773&fm=27&gp=0.jpg"}]}
+    ],
+    "chart": [
+        {"id": 1,"sign": "王小二的签名","name": "王小二", "avatar": "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3054730122,3618781773&fm=27&gp=0.jpg", "msg": "聊天记录12"},
+        {"id": 2,"sign": "鸡蛋哥2的签名","name": "鸡蛋哥2", "avatar": "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3054730122,3618781773&fm=27&gp=0.jpg", "msg": "聊天记录33"},
+        {"id": 3,"sign": "盖伦的签名","name": "盖伦", "avatar": "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3054730122,3618781773&fm=27&gp=0.jpg", "msg": "聊天记录444"},
+        {"id": 4,"sign": "王小二的签名","name": "石头", "avatar": "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3054730122,3618781773&fm=27&gp=0.jpg", "msg": "聊天记录555"},
+        {"id": 5,"sign": "光辉女神的签名","name": "光辉女神", "avatar": "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3054730122,3618781773&fm=27&gp=0.jpg", "msg": "聊天记录666"},
+        {"id": 6,"sign": "王小二的签名","name": "莫甘娜", "avatar": "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3054730122,3618781773&fm=27&gp=0.jpg", "msg": ""},
+        {"id": 7,"sign": "王小二的签名","name": "鸡蛋哥5", "avatar": "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3054730122,3618781773&fm=27&gp=0.jpg", "msg": "聊天记录"},
+        {"id": 8,"sign": "王小二的签名","name": "铁头娃", "avatar": "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3054730122,3618781773&fm=27&gp=0.jpg", "msg": "聊天记录777"},
+        {"id": 9,"sign": "王小二的签名","name": "维恩", "avatar": "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3054730122,3618781773&fm=27&gp=0.jpg", "msg": "聊天记录888"},
+        {"id": 10,"sign": "王小二的签名","name": "小炮", "avatar": "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3054730122,3618781773&fm=27&gp=0.jpg", "msg": "聊天记录999"},
+        {"id": 11,"sign": "王小二的签名","name": "提莫", "avatar": "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3054730122,3618781773&fm=27&gp=0.jpg", "msg": "聊天记录000"},
+        {"id": 12,"sign": "王小二的签名","name": "二哈", "avatar": "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3054730122,3618781773&fm=27&gp=0.jpg", "msg": "聊天记录--"},
+        {"id": 13,"sign": "王小二的签名","name": "柯基", "avatar": "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3054730122,3618781773&fm=27&gp=0.jpg", "msg": "聊天记录"}
+    ]
+}

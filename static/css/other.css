@@ -1,0 +1,17 @@
+#vue_charting .el-textarea__inner{
+    padding: 0px;
+    outline: none;
+    border: none; 
+}
+#vue_charting .el-autocomplete{
+    width: 100%;
+}
+#vue_charting .el-upload--text{
+    border: none;
+    height: auto;
+    width: auto;
+    overflow: inherit;
+}
+#vue_charting .el-upload-list{
+    display: none;
+}
