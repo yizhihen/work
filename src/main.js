@@ -8,6 +8,11 @@ import 'element-ui/lib/theme-chalk/index.css';    // 默认主题
 // import '../static/css/theme-green/index.css';       // 浅绿色主题
 import "babel-polyfill";
 
+
+import '../static/UE/ueditor.config.js'
+import '../static/UE/ueditor.all.min.js'
+import '../static/UE/lang/zh-cn/zh-cn.js'
+import '../static/UE/ueditor.parse.min.js'
 import '../static/messge/ytx-web-im-min-new-5.4.0.js'
 
 import vuescroll from 'vuescroll/dist/vuescroll-native';

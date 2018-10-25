@@ -21,7 +21,8 @@
                 <div class="ue-container clearfix">
                     <p class="title fl">正文：</p>
                     <div class="editor">
-                        <vue-editor></vue-editor>
+                        <!-- <vue-editor></vue-editor> -->
+                        <vue-editor :defaultMsg="itemDetail.item_content" :myconfig="config" :id="ue1" ref="ue"></vue-editor>
                     </div>
                 </div>            
             </div>
@@ -61,7 +62,7 @@
 </template>
 
 <script>
-    import VueEditor from '../../common/VueEditor.vue'
+    import VueEditor from '../../common/ue.vue'
     export default {
         name: 'new',
         data(){
