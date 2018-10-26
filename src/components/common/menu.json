@@ -2,8 +2,8 @@
     "operation": [
         {"index": "1","icon": "el-icon-setting","title": "内容管理","subs": 
             [
-                {"index": "1-1","title":"平台公告","url": "/test"},
-                {"index": "1-2","title":"话题设置","url": "/test"},
+                {"index": "/operation/bulletin","title":"平台公告"},
+                {"index": "/operation/topic","title":"话题设置"},
                 {"index": "1-3","title":"话题内容审核","url": "/test"},
                 {"index": "1-4","title":"学院设置","url": "/test"},
                 {"index": "1-5","title":"学院文章管理","url": "/test"},

@@ -6,27 +6,26 @@
             <el-menu :default-active="activeIndex" mode="horizontal"        
             background-color="#242f42"
             text-color="rgba(255,255,255,.5)"
-            active-text-color="#fff"
-            @select="handleSelect">
+            active-text-color="#FB6E2E"
+            @select="handleSelect" router>
                 <el-menu-item v-for="(item,idx) in items" :key="idx" :index="item.index">
                     <template slot="title"> 
-                    <i :class="item.icon"></i>
-                    <span>{{item.title}}</span>
+                        <i :class="item.icon"></i>
+                        <span>{{item.title}}</span>
                     </template>
                 </el-menu-item>            
             </el-menu>
-            <div class="line"></div>  
         </div>
         <div class="right-manage">
             <span class="item-container">
                 <el-badge class="item">
-                    <el-button type="text" @click="goPage('personal',false)">个人中心</el-button>
+                    <el-button type="text" @click="goPage('/personal',false)">个人中心</el-button>
                 </el-badge>
                 <el-badge :value="message" class="item">
-                    <el-button type="text" @click="goPage('mail',false)">邮件</el-button>
+                    <el-button type="text" @click="goPage('/mail',false)">邮件</el-button>
                 </el-badge>
                 <el-badge :value="message" class="item">
-                    <el-button type="text" @click="goPage('message',false)">消息</el-button>
+                    <el-button type="text" @click="goPage('/message',false)">消息</el-button>
                 </el-badge>
             </span>            
             <el-button type="text"><i class="el-icon-upload el-icon--left"></i>退出登录</el-button>
@@ -42,41 +41,41 @@
                 fullscreen: false,
                 name: 'linxin',
                 message: 2,
-                activeIndex: 'operation',
+                activeIndex: '/operation/bulletin',
                 items: [
                     {
                         icon: 'el-icon-setting',
-                        index: 'operation',
+                        index: '/operation/bulletin',
                         title: '运营管理'
                     },
                     {
                         icon: 'el-icon-setting',
-                        index: 'product',
+                        index: '/product',
                         title: '产品管理'
                     },
                     {
                         icon: 'el-icon-setting',
-                        index: 'itegral',
+                        index: '/itegral',
                         title: '积分系统'
                     },
                     {
                         icon: 'el-icon-setting',
-                        index: 'business',
+                        index: '/business',
                         title: '业务管理'
                     },
                     {
                         icon: 'el-icon-setting',
-                        index: 'data',
+                        index: '/data',
                         title: '数据统计'
                     },
                     {
                         icon: 'el-icon-setting',
-                        index: 'credit',
+                        index: '/credit',
                         title: '资信系统'
                     },
                     {
                         icon: 'el-icon-setting',
-                        index: 'authority',
+                        index: '/authority',
                         title: '权限管理'
                     }
                 ]
@@ -86,45 +85,25 @@
             username(){
                 let username = localStorage.getItem('ms_username');
                 return username ? username : this.name;
-            }
+            },
         },
-        methods:{            
+        created(){
+            this.hasDefult()
+        },
+        methods:{
+            hasDefult(){
+                let boo = this.$store.state.hasSidebar
+                if(!boo) this.activeIndex = ''
+            },
             handleSelect(key, keyPath) {
-                console.log(key, keyPath);
                 let _self = this
                 _self.$store.commit('fullscreen',true)
             },
-            // 全屏事件
-            handleFullScreen(){
-                let element = document.documentElement;
-                if (this.fullscreen) {
-                    if (document.exitFullscreen) {
-                        document.exitFullscreen();
-                    } else if (document.webkitCancelFullScreen) {
-                        document.webkitCancelFullScreen();
-                    } else if (document.mozCancelFullScreen) {
-                        document.mozCancelFullScreen();
-                    } else if (document.msExitFullscreen) {
-                        document.msExitFullscreen();
-                    }
-                } else {
-                    if (element.requestFullscreen) {
-                        element.requestFullscreen();
-                    } else if (element.webkitRequestFullScreen) {
-                        element.webkitRequestFullScreen();
-                    } else if (element.mozRequestFullScreen) {
-                        element.mozRequestFullScreen();
-                    } else if (element.msRequestFullscreen) {
-                        // IE11
-                        element.msRequestFullscreen();
-                    }
-                }
-                this.fullscreen = !this.fullscreen;
-            },
             goPage(page,boo){
                 let _self = this
-                _self.$router.replace({path:page})
                 _self.$store.commit('fullscreen',boo)
+                _self.hasDefult()
+                _self.$router.replace({path:page})
             },
         },
         mounted(){

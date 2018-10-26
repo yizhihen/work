@@ -34,7 +34,7 @@
                             <template v-if="subItem.subs">
                                 <el-submenu :index="subItem.index" :key="subItem.index">
                                     <template slot="title">{{ subItem.title }}</template>
-                                    <el-menu-item v-for="(subItem2,i) in subItem.subs" :index="subItem2.index">{{ subItem2.title }}</el-menu-item>
+                                    <el-menu-item v-for="(subItem2,i) in subItem.subs" :index="subItem2.index" :key="i">{{ subItem2.title }}</el-menu-item>
                                 </el-submenu>
                             </template>
                             <template v-else>

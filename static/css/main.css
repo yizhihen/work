@@ -31,7 +31,7 @@ a {
 }
 
 .main-color{
-    color: #409EFF !important;
+    color: #FB6E2E !important;
 }
 .ellipsis{
     overflow: hidden;
@@ -83,6 +83,12 @@ a {
     border: 1px solid #ddd;
     border-radius: 5px;
 }
+/* 新添加样式 */
+.container{
+    min-width: 988px;
+    max-width: 1200px;
+    margin: auto
+}
 
 .crumbs {
     margin-bottom: 20px;
@@ -122,7 +128,10 @@ a {
 .move-leave {
     opacity: 0;
 }
-
+/* BaseMenu */
+.el-menu--horizontal>.el-menu-item.is-active{
+    border: none;
+}
 /*BaseForm*/
 
 .form-box {

@@ -26,7 +26,7 @@ export default {
           'simpleupload', 'imagenone', 'imageleft', 'imageright', 'imagecenter',
         ]],
         //设置编辑器初始化高度
-        initialFrameWidth: 1000, //初始化编辑器宽度,默认1000
+        initialFrameWidth: '100%', //初始化编辑器宽度,默认1000
         initialFrameHeight: 320, //初始化编辑器高度,默认320
         minFrameWidth: 800, //编辑器拖动时最小宽度,默认800
         minFrameHeight: 220, //编辑器拖动时最小高度,默认220
@@ -55,6 +55,16 @@ export default {
     },
     myconfig: null
   },
+  watch: {
+    defaultMsg(old,now){
+      this.editor.setContent(this.msg);
+    }
+  },
+  computed: {
+    msg(){
+      return this.defaultMsg
+    }
+  },
   created () {
     this.applyConfig()
   },
@@ -62,9 +72,12 @@ export default {
     // this.config.serverUrl = this.$api.indexUrl + "/api/ueditor?auth_token=" + encodeURI(this.visit_id) + "&wechatAuthId=" + this.parentId;
     this.config.serverUrl = ''
     this.editor = UE.getEditor(this.id, this.config);
+    
     this.editor.addListener("ready", () => {
       if (this.defaultMsg && this.isLoading) {
-        this.editor.setContent(this.defaultMsg); // 确保UE加载完成后，放入内容。
+        this.$nextTick(()=>{
+          this.editor.setContent(this.defaultMsg); // 确保UE加载完成后，放入内容。
+        })
       }
     })
     this.editor.addListener("selectionchange", () => {

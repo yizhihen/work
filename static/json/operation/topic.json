@@ -1,0 +1,17 @@
+{
+    "list": [
+        {"isEditing": "0", "icon": "http://img5.imgtn.bdimg.com/it/u=817624264,3318856549&fm=200&gp=0.jpg", "class": "资讯", "id": 1, "desc": "这是关于资讯的介绍", "limit": "全部"},
+        {"isEditing": "0", "icon": "http://img5.imgtn.bdimg.com/it/u=817624264,3318856549&fm=200&gp=0.jpg", "class": "资讯", "id": 2, "desc": "这是关于资讯的介绍", "limit": "全部"},
+        {"isEditing": "0", "icon": "http://img5.imgtn.bdimg.com/it/u=817624264,3318856549&fm=200&gp=0.jpg", "class": "资讯", "id": 3, "desc": "这是关于资讯的介绍", "limit": "全部"}
+    ],
+    "userList": [
+        {"name": "王小明1", "id": "1", "disabled": false},
+        {"name": "王小明2", "id": "2", "disabled": true},
+        {"name": "王小明3", "id": "3", "disabled": true},
+        {"name": "王小明4", "id": "4", "disabled": false},
+        {"name": "王小明5", "id": "5", "disabled": false},
+        {"name": "王小明6", "id": "6", "disabled": true},
+        {"name": "王小明7", "id": "7", "disabled": false},
+        {"name": "王小明8", "id": "8", "disabled": true}
+    ]
+}
