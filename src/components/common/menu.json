@@ -5,23 +5,23 @@
                 {"index": "/operation/bulletin","title":"平台公告"},
                 {"index": "/operation/topic","title":"话题设置"},
                 {"index": "1-3","title":"话题内容审核","url": "/test"},
-                {"index": "1-4","title":"学院设置","url": "/test"},
-                {"index": "1-5","title":"学院文章管理","url": "/test"},
+                {"index": "/operation/college","title":"学院设置","url": "/test"},
+                {"index": "/operation/articlemanage","title":"学院文章管理","url": "/test"},
                 {"index": "1-6","title":"违禁词管理","url": "/test"}
             ]
         },
         {"index": "2","icon": "el-icon-setting","title": "文档管理","subs": 
             [
-                {"index": "2-1","title":"合同&协议","url": "/test"},
-                {"index": "2-2","title":"产品介绍","url": "/test"},
+                {"index": "/operation/agreement","title":"合同&协议","url": "/test"},
+                {"index": "/operation/products","title":"产品介绍","url": "/test"},
                 {"index": "2-3","title":"公司介绍","url": "/test"},
-                {"index": "2-4","title":"数据披露","url": "/test"},
+                {"index": "/operation/dataDisclosure","title":"数据披露","url": "/test"},
                 {"index": "2-5","title":"常见问题","url": "/test"}
             ]
         },
         {"index": "3","icon": "el-icon-setting","title": "促销统计","subs": 
             [
-                {"index": "3-1","title":"促销规则设置","url": "/test"}
+                {"index": "/operation/ruleSetting","title":"促销规则设置","url": "/test"}
             ]
         }
     ]

@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="container" id="topicSetting">
         <div class="top clearfix">
             <div class="tag">
                 <el-tag type="warning">时间设置</el-tag>
@@ -42,7 +42,17 @@
                     align="center"
                     width="120">
                         <template slot-scope="scope">
-                            <img class="response-img icon-img" :src="scope.row.icon" alt="">
+                            <img v-if="scope.row.isEditing != 1" class="response-img icon-img" :src="scope.row.icon" alt="">
+                            <el-upload
+                            v-else
+                            class="avatar-uploader"
+                            action="https://jsonplaceholder.typicode.com/posts/"
+                            :show-file-list="false"
+                            :on-success="handleAvatarSuccess"
+                            :before-upload="beforeAvatarUpload">
+                            <!-- <img v-if="imageUrl" :src="scope.row.icon" class="avatar"> -->
+                            <i class="el-icon-plus avatar-uploader-icon"></i>
+                            </el-upload>
                         </template>
                     </el-table-column>
                     <el-table-column
@@ -121,7 +131,7 @@
                     PubInterval: '',//发布时间间隔
                 },
                 tableData: DATA.list,
-                options: DATA.userList
+                options: DATA.userList,
             }
         },
         components: {
@@ -134,20 +144,34 @@
             }
         },
         methods: {
-           add(){
-               let _self = this
-               let item = {
-                   isEditing: 1,
-                   icon: "http://img5.imgtn.bdimg.com/it/u=817624264,3318856549&fm=200&gp=0.jpg",
-                   class: "",
-                   desc: "",
-                   limit: ""
-               }
-               _self.tableData.push(item)
-           },
-           remove(index){
-               this.tableData.splice(index,1)
-           }
+            add(){
+                let _self = this
+                let item = {
+                    isEditing: 1,
+                    icon: "http://img5.imgtn.bdimg.com/it/u=817624264,3318856549&fm=200&gp=0.jpg",
+                    class: "",
+                    desc: "",
+                    limit: ""
+                }
+                _self.tableData.push(item)
+            },
+            remove(index){
+                this.tableData.splice(index,1)
+            },
+            handleAvatarSuccess(res, file) {
+                this.imageUrl = URL.createObjectURL(file.raw);
+            },
+            beforeAvatarUpload(file) {
+                const isJPG = file.type === 'image/jpeg';
+                const isLt2M = file.size / 1024 / 1024 < 2;
+                if (!isJPG) {
+                this.$message.error('上传头像图片只能是 JPG 格式!');
+                }
+                if (!isLt2M) {
+                this.$message.error('上传头像图片大小不能超过 2MB!');
+                }
+                return isJPG && isLt2M;
+            }
         }
     }
 </script>

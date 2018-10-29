@@ -15,3 +15,27 @@
 #vue_charting .el-upload-list{
     display: none;
 }
+
+/* 运营管理 话体设置/学院设置*/
+#topicSetting .el-upload--text,#collegeSetting .el-upload--text{
+    width: 65px;
+    height: 65px;
+}
+#topicSetting .el-upload--text i,#collegeSetting .el-upload--text i{
+    position: absolute;
+    top: 43%;
+    bottom: 50%;
+    transform: translate(-50%,-50%);
+}
+
+/* 运营管理 学院文章管理*/
+#articleManage .el-upload--text{
+    width: 200px;
+    height: 150px;
+}
+#articleManage .el-upload--text i{
+    position: absolute;
+    top: 44%;
+    bottom: 50%;
+    transform: translate(-50%,-50%);
+}

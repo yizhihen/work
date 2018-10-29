@@ -2,7 +2,7 @@
 <template>
     <div class="container">
         <el-tabs v-model="activeName" @tab-click="handleClick">
-            <el-tab-pane label="公告列表" name="first">
+            <el-tab-pane label="合同协议列表" name="first">
                 <el-table
                 :data="list"
                 style="width: 100%">
@@ -13,18 +13,13 @@
                     </el-table-column>
                     <el-table-column
                         prop="num"
-                        label="编号"
+                        label="协议编号"
                         width="100">
-                    </el-table-column>
+                    </el-table-column>                    
                     <el-table-column
-                        prop="date"
-                        label="发布日期"
-                        width="180">
-                    </el-table-column>
-                    <el-table-column
-                        label="标题"                        
+                        label="协议名称"                        
                         show-overflow-tooltip
-                        width="240">
+                        width="180">
                         <template slot-scope="scope">
                             <span class="pointer ellipsis" @click="viewDetail(scope.row)">{{scope.row.title}}</span>
                         </template>
@@ -32,9 +27,14 @@
                     <el-table-column
                         label="内容">
                         <template slot-scope="scope">
-                            <span class="pointer ellipsis" @click="viewDetail(scope.row)">{{scope.row.content}}</span>
+                            <span class="pointer c9 ellipsis" @click="viewDetail(scope.row)">{{scope.row.content}}</span>
                         </template>
-                    </el-table-column>                    
+                    </el-table-column>
+                    <el-table-column
+                        prop="date"
+                        label="更新日期"
+                        width="180">
+                    </el-table-column>
                     <el-table-column
                         width="150"
                         align="center"
@@ -55,7 +55,7 @@
                     </el-pagination>
                 </div>
             </el-tab-pane>
-            <el-tab-pane label="发布公告" name="second">
+            <el-tab-pane label="添加合同" name="second">
                 <el-form :model="param" label-width="60px">
                     <el-form-item label="标题">
                         <el-input v-model="currentItem.title"></el-input>
