@@ -1,17 +1,14 @@
-<!-- 审核流程控制 -->
+<!-- 参数配置 -->
 <template>
     <div class="container" id="topicCheck">
         <el-tabs v-model="activeName" @tab-click="handleClick">
-            <el-tab-pane label="分期贷-优享" name="first">
+            <el-tab-pane label="出借设置" name="first">
                 
             </el-tab-pane>
-            <el-tab-pane label="分期贷-惠享" name="second">
+            <el-tab-pane label="借款设置" name="second">
                 
             </el-tab-pane>
-            <el-tab-pane label="小微贷-企宝" name="three">
-                
-            </el-tab-pane>
-            <el-tab-pane label="分散原则设置" name="four">
+            <el-tab-pane label="平台费用设置" name="three">
                 
             </el-tab-pane>
         </el-tabs>

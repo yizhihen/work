@@ -109,19 +109,12 @@ export default {
         return vue.$route.path.match(/\/(\S*)\//) != null ? '/' + vue.$route.path.match(/\/(\S*)\//)[1] : ''
     };
     // 全局获取当前submenu的数据
-    Vue.prototype.$getSubmenu = function(vue,obj){
+    Vue.prototype.$getSubmenu = function(vue,arr){
       let list = []
       let name = vue.$route.path.match(/\/(\S*)\//) != null ? vue.$route.path.match(/\/(\S*)\//)[1] : ''
-      switch (name) {
-        case 'operation':
-          list = obj.operation;
-          break;
-        case 'product':
-          list = obj.product;
-          break;
-        default :
-          list = []
-      }
+      list = arr[arr.findIndex((item)=>{
+        return name == item.name
+      })].sub
       return list
     };
     // 全局判断是否有侧边栏

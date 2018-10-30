@@ -1,32 +1,99 @@
 {
-    "operation": [
-        {"index": "1","icon": "el-icon-setting","title": "内容管理","subs": 
-            [
-                {"index": "/operation/bulletin","title":"平台公告"},
-                {"index": "/operation/topic","title":"话题设置"},
-                {"index": "/operation/topiccheck","title":"话题内容审核","url": "/test"},
-                {"index": "/operation/college","title":"学院设置","url": "/test"},
-                {"index": "/operation/articlemanage","title":"学院文章管理","url": "/test"},
-                {"index": "1-6","title":"违禁词管理","url": "/test"}
-            ]
-        },
-        {"index": "2","icon": "el-icon-setting","title": "文档管理","subs": 
-            [
-                {"index": "/operation/agreement","title":"合同&协议","url": "/test"},
-                {"index": "/operation/products","title":"产品介绍","url": "/test"},
-                {"index": "2-3","title":"公司介绍","url": "/test"},
-                {"index": "/operation/dataDisclosure","title":"数据披露","url": "/test"},
-                {"index": "2-5","title":"常见问题","url": "/test"}
-            ]
-        },
-        {"index": "3","icon": "el-icon-setting","title": "促销统计","subs": 
-            [
-                {"index": "/operation/ruleSetting","title":"促销规则设置","url": "/test"}
-            ]
-        }
-    ],
-    "product": [
-        {"index": "/product/Reviewprocess","icon": "","title": "审核流程控制"},
-        {"index": "/product","icon": "","title": "参数配置"}
+    "list": [
+        {"name": "operation", "title": "运营管理", "index": "/operation", "icon": "icon-yunyingguanli", "sub": [
+            {"index": "1","icon": "icon-ziliaoneirongguanli_huaban","title": "内容管理","subs": 
+                [
+                    {"index": "/operation/bulletin","title":"平台公告"},
+                    {"index": "/operation/topic","title":"话题设置"},
+                    {"index": "/operation/topiccheck","title":"话题内容审核","url": "/test"},
+                    {"index": "/operation/college","title":"学院设置","url": "/test"},
+                    {"index": "/operation/articlemanage","title":"学院文章管理","url": "/test"},
+                    {"index": "1-6","title":"违禁词管理","url": "/test"}
+                ]
+            },
+            {"index": "2","icon": "icon-wendang","title": "文档管理","subs": 
+                [
+                    {"index": "/operation/agreement","title":"合同&协议","url": "/test"},
+                    {"index": "/operation/products","title":"产品介绍","url": "/test"},
+                    {"index": "2-3","title":"公司介绍","url": "/test"},
+                    {"index": "/operation/dataDisclosure","title":"数据披露","url": "/test"},
+                    {"index": "2-5","title":"常见问题","url": "/test"}
+                ]
+            },
+            {"index": "3","icon": "icon-cuxiaoguanli","title": "促销统计","subs": 
+                [
+                    {"index": "/operation/ruleSetting","title":"促销规则设置","url": "/test"}
+                ]
+            }
+        ]},
+        {"name": "product", "title": "产品管理", "index": "/product", "icon": "icon-chanpinguanli", "sub": [
+            {"index": "1","icon": "icon-chanpinguanli","title": "产品管理","subs": 
+                [{"index": "/product/Reviewprocess","icon": "","title": "审核流程控制"},
+                {"index": "/product/paramconfig","icon": "","title": "参数配置"}]
+            }
+        ]},
+        {"name": "itegral", "title": "积分系统", "index": "/itegral", "icon": "icon-jifenguanli", "sub": [
+            {"index": "1","icon": "icon-jifenguanli","title": "积分管理","subs": 
+                [{"index": "/itegral/itegralmanage","icon": "","title": "积分管理"},
+                {"index": "/itegral/goodsmanage","icon": "","title": "商品管理"},
+                {"index": "/itegral/ordermanage","icon": "","title": "积分商城订单"}]
+            }
+        ]},
+        {"name": "business", "title": "业务管理", "index": "/business", "icon": "icon-yewu", "sub": [
+            {"index": "1","icon": "icon-xiangmu","title": "标的管理","subs": 
+                [
+                    {"index": "/business/sublist","title":"标的列表"}
+                ]
+            },
+            {"index": "2","icon": "icon-fengkong","title": "风控管理","subs": 
+                [
+                    {"index": "/business/pendinglistfk","title":"待审核标列表","url": "/test"},
+                    {"index": "/business/checklistfk","title":"审核记录","url": "/test"},
+                    {"index": "/business/checkplanfk","title":"巡检计划","url": "/test"},
+                    {"index": "/business/filemanagefk","title":"档案管理","url": "/test"}
+                ]
+            },
+            {"index": "3","icon": "icon-xingzhengfawu","title": "法务管理","subs": 
+                [
+                    {"index": "/business/pendinglistfw","title":"待审核列表","url": "/test"},
+                    {"index": "/business/checklistfw","title":"审核记录","url": "/test"},
+                    {"index": "/business/rearapproval","title":"后置审批","url": "/test"},
+                    {"index": "/business/filemanagefw","title":"后置档案管理","url": "/test"}
+                ]
+            },
+            {"index": "4","icon": "icon-huaban","title": "综合业务管理","subs": 
+                [
+                    {"index": "/operation/followlist","title":"客服跟进列表","url": "/test"},
+                    {"index": "/operation/followhistory","title":"客服跟进历史","url": "/test"},
+                    {"index": "/operation/servicemanage","title":"在线客服管理","url": "/test"},
+                    {"index": "/operation/followoverdue","title":"逾期跟进","url": "/test"}
+                ]
+            }
+        ]},
+        {"name": "data", "title": "数据统计", "index": "/data", "icon": "icon-shujutongji", "sub": [
+            {"index": "1","icon": "icon-shujutongji","title": "数据纵横","subs": 
+                [{"index": "/data/business","icon": "","title": "商户统计"},
+                {"index": "/data/user","icon": "","title": "用户统计"},
+                {"index": "/data/sales","icon": "","title": "促销统计"},
+                {"index": "/data/windcontrol","icon": "","title": "风控控制"},
+                {"index": "/data/account","icon": "","title": "资金账户统计"},
+                {"index": "/data/plan","icon": "","title": "计划进程监控"},
+                {"index": "/data/loan","icon": "","title": "借款统计"},
+                {"index": "/data/lending","icon": "","title": "出借统计"},
+                {"index": "/data/recharge","icon": "","title": "充值提现统计"}]
+            }
+        ]},
+        {"name": "credit", "title": "资信系统", "index": "/credit", "icon": "icon-qiyetouzixinxichaxun", "sub": [
+            {"index": "1","icon": "icon-qiyetouzixinxichaxun","title": "资信管理","subs": 
+                [{"index": "/credit/evaluation","icon": "","title": "资信评估"},
+                {"index": "/credit/evaluatecontrol","icon": "","title": "评估控制"}]
+            }
+        ]},
+        {"name": "authority", "title": "权限管理", "index": "/authority", "icon": "icon-quanxianguanli", "sub": [
+            {"index": "1","icon": "icon-quanxianguanli","title": "权限管理","subs": 
+                [{"index": "/authority/staff","icon": "","title": "员工列表"},
+                {"index": "/authority/competence","icon": "","title": "角色与权限"}]
+            }
+        ]}
     ]
 }

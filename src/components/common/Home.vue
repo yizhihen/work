@@ -1,7 +1,9 @@
 <template>
     <div class="wrapper">
-        <v-head :menu="menuName"></v-head>
-        <v-sidebar :submenu="submenuList" v-if="showSidebar"></v-sidebar>
+        <v-head :menu="menuName" :list="menuList"></v-head>
+        <transition name="move" mode="out-in">
+            <v-sidebar :submenu="submenuList" v-if="showSidebar"></v-sidebar>
+        </transition>
         <div :class="['content-box',collapse ? 'content-collapse' : '',showSidebar ? '': 'no--hasSidebar']">
             <v-tags v-if="false"></v-tags>
             <div class="content">
@@ -29,21 +31,25 @@
         data(){
             return {
                 tagsList: [],
-                collapse: false
+                collapse: false,
+                menuList: submenu.list
             }
         },
         components:{
             vHead, vSidebar, vTags
         },
         computed : {
+            // 是否显示侧边栏 slidebar
             showSidebar(){
                 return this.$showSidebar(this)
             },
+            // 主菜单当前活跃项
             menuName(){
                 return this.$getMenu(this)
             },
+            // 侧边栏当前列表
             submenuList(){
-                return this.$getSubmenu(this,submenu)
+                return this.$getSubmenu(this,this.menuList)
             }
         },
         created(){
@@ -57,7 +63,7 @@
                     msg[i].name && arr.push(msg[i].name);
                 }
                 this.tagsList = arr;
-            })
+            })            
         },
         methods: {}
     }

@@ -1,7 +1,12 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import operation from "./operation/index";
-import product from "./product/index";
+import operation from "./operation/index";  //运营管理
+import product from "./product/index";      //产品管理
+import itegral from "./itegral/index";      //积分系统
+import business from "./business/index";    //业务管理
+import data from "./data/index";            //数据统计
+import credit from "./credit/index";        //资信系统
+import authority from "./authority/index";  //权限管理
 
 let list = [
     {
@@ -26,7 +31,7 @@ let list = [
     }
 ]
 
-let base = [...list,...operation,...product]
+let base = [...list,...operation,...product,...itegral,...business,...data,...credit,...authority]
 
 Vue.use(Router);
 

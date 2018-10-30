@@ -8,12 +8,12 @@
             text-color="rgba(255,255,255,.5)"
             active-text-color="#FB6E2E"
             router>
-                <el-menu-item v-for="(item,idx) in items" :key="idx" :index="item.index">
+                <el-menu-item v-for="(item,idx) in list" :key="idx" :index="item.index">
                     <template slot="title">
-                        <i :class="item.icon"></i>
+                        <i :class="['iconfont', item.icon]"></i>
                         <span>{{item.title}}</span>
                     </template>
-                </el-menu-item>            
+                </el-menu-item>
             </el-menu>
         </div>
         <div class="right-manage">
@@ -28,7 +28,7 @@
                     <el-button type="text" @click="goPage('/message',false)">消息</el-button>
                 </el-badge>
             </span>            
-            <el-button type="text"><i class="el-icon-upload el-icon--left"></i>退出登录</el-button>
+            <el-button type="text" icon="el-icon-star-off">退出登录</el-button>
         </div>               
     </div>
 </template>
@@ -36,7 +36,8 @@
     import bus from '../common/bus';
     export default {
         props: {
-            menu: String
+            menu: String,
+            list: Array
         },
         data() {
             return {
@@ -44,43 +45,6 @@
                 fullscreen: false,
                 name: 'linxin',
                 message: 2,
-                items: [
-                    {
-                        icon: 'el-icon-setting',
-                        index: '/operation',
-                        title: '运营管理'
-                    },
-                    {
-                        icon: 'el-icon-setting',
-                        index: '/product',
-                        title: '产品管理'
-                    },
-                    {
-                        icon: 'el-icon-setting',
-                        index: '/itegral',
-                        title: '积分系统'
-                    },
-                    {
-                        icon: 'el-icon-setting',
-                        index: '/business',
-                        title: '业务管理'
-                    },
-                    {
-                        icon: 'el-icon-setting',
-                        index: '/data',
-                        title: '数据统计'
-                    },
-                    {
-                        icon: 'el-icon-setting',
-                        index: '/credit',
-                        title: '资信系统'
-                    },
-                    {
-                        icon: 'el-icon-setting',
-                        index: '/authority',
-                        title: '权限管理'
-                    }
-                ]
             }
         },
         computed:{
