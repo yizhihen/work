@@ -1,10 +1,8 @@
 let operation = [
-    //运营管理
-    // {
-    //     path: '/operation',
-    //     component: resolve => require(['@/components/subpage/operation/bulletin.vue'], resolve),
-    //     meta: { title: '运营管理' },
-    // },
+    {
+      path: '/operation',
+      redirect: '/operation/bulletin'
+    },    
     {
       //平台公告
       path: '/operation/bulletin',
@@ -16,6 +14,12 @@ let operation = [
       path: '/operation/topic',
       component:  resolve => require(['@/components/subpage/operation/topicSetting.vue'], resolve),
       meta: { title: '话题设置' }
+    },
+    {
+      //话题内容审核
+      path: '/operation/topiccheck',
+      component:  resolve => require(['@/components/subpage/operation/topicCheck.vue'], resolve),
+      meta: { title: '话题内容审核' }
     },
     {
       //学院设置

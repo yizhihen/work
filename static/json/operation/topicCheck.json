@@ -1,0 +1,9 @@
+{
+    "list": [
+        {"date": "2018-10-26 13:35", "userName": "骄傲的小鸟", "bannedNum": "10", "type": "发帖", "id": 1, "tip": "这是提示信息1", "title": "这是话题的标题1", "content": "这是话题内容1","isCheck": 0, "class": "咨询"},
+        {"date": "2018-10-26 13:35", "userName": "骄傲的小鸟", "bannedNum": "9", "type": "发帖", "id": 2, "tip": "这是提示信息2", "title": "这是话题的标题2", "content": "这是话题内容2","isCheck": 1, "class": "咨询"},
+        {"date": "2018-10-26 13:35", "userName": "骄傲的小鸟", "bannedNum": "8", "type": "发帖", "id": 3, "tip": "这是提示信息3", "title": "这是话题的标题3", "content": "这是话题内容3","isCheck": 0, "class": "咨询"},
+        {"date": "2018-10-26 13:35", "userName": "骄傲的小鸟", "bannedNum": "7", "type": "发帖", "id": 4, "tip": "这是提示信息4", "title": "这是话题的标题4", "content": "这是话题内容4","isCheck": 1, "class": "咨询"},
+        {"date": "2018-10-26 13:35", "userName": "骄傲的小鸟", "bannedNum": "6", "type": "发帖", "id": 5, "tip": "这是提示信息5", "title": "这是话题的标题5", "content": "这是话题内容5","isCheck": 0, "class": "咨询"}
+    ]
+}

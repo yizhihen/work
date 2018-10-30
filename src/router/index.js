@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import operation from "./operation/index";
+import product from "./product/index";
 
 let list = [
     {
@@ -25,7 +26,7 @@ let list = [
     }
 ]
 
-let base = [...list,...operation]
+let base = [...list,...operation,...product]
 
 Vue.use(Router);
 

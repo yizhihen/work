@@ -16,6 +16,10 @@ const store = new Vuex.Store({
             console.log(res)
             state.hasSidebar = res
         },
+        activeIndex(state,res){
+            console.log(res)
+            state.activeIndex = res
+        }
     }
 })
 export default store;

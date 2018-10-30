@@ -8,21 +8,29 @@ import 'element-ui/lib/theme-chalk/index.css';    // 默认主题
 // import '../static/css/theme-green/index.css';       // 浅绿色主题
 import "babel-polyfill";
 
-
+// 引入ueditor
 import '../static/UE/ueditor.config.js'
 import '../static/UE/ueditor.all.min.js'
 import '../static/UE/lang/zh-cn/zh-cn.js'
 import '../static/UE/ueditor.parse.min.js'
+
+// 引入融云
 import '../static/messge/ytx-web-im-min-new-5.4.0.js'
 
+// 引入 vuescroll 样式库
 import vuescroll from 'vuescroll/dist/vuescroll-native';
 import 'vuescroll/dist/vuescroll.css';
 Vue.use(vuescroll);
 
+// 引入 elementUI 
 Vue.use(ElementUI, { size: 'small' });
+
+// 引入 axios
 Vue.prototype.$axios = axios;
 
-Vue.prototype.apiUrl = 'http://118.25.107.247:1112/'
+// 引用全局封装方法
+import Methods from './script/common.js'
+Vue.use(Methods);
 
 //使用钩子函数对路由进行权限跳转
 router.beforeEach((to, from, next) => {
@@ -43,6 +51,7 @@ router.beforeEach((to, from, next) => {
         }
     }
 })
+
 
 new Vue({
     router,

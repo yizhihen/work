@@ -28,6 +28,11 @@
     transform: translate(-50%,-50%);
 }
 
+/* 运营管理 话题内容审核 */
+#topicCheck .el-dialog__body{
+    padding: 5px 20px;
+}
+
 /* 运营管理 学院文章管理*/
 #articleManage .el-upload--text{
     width: 200px;
@@ -38,4 +43,11 @@
     top: 44%;
     bottom: 50%;
     transform: translate(-50%,-50%);
+}
+/* 运营管理 促销规则设置 */
+#ruleSetting .el-form-item--small .el-form-item__content{
+    width: 200px;
+}
+#ruleSetting .radio-form .el-form-item--small .el-form-item__content{
+    width: auto;
 }

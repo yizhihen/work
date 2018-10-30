@@ -3,13 +3,13 @@
         <!-- 折叠按钮 -->
         <span class="logo"><img src="static/img/logo2.png"></span>
         <div class="menu-container">
-            <el-menu :default-active="activeIndex" mode="horizontal"        
+            <el-menu :default-active="menu" mode="horizontal"        
             background-color="#242f42"
             text-color="rgba(255,255,255,.5)"
             active-text-color="#FB6E2E"
-            @select="handleSelect" router>
+            router>
                 <el-menu-item v-for="(item,idx) in items" :key="idx" :index="item.index">
-                    <template slot="title"> 
+                    <template slot="title">
                         <i :class="item.icon"></i>
                         <span>{{item.title}}</span>
                     </template>
@@ -35,17 +35,19 @@
 <script> 
     import bus from '../common/bus';
     export default {
+        props: {
+            menu: String
+        },
         data() {
             return {
                 collapse: false,
                 fullscreen: false,
                 name: 'linxin',
                 message: 2,
-                activeIndex: '/operation/bulletin',
                 items: [
                     {
                         icon: 'el-icon-setting',
-                        index: '/operation/bulletin',
+                        index: '/operation',
                         title: '运营管理'
                     },
                     {
@@ -85,30 +87,16 @@
             username(){
                 let username = localStorage.getItem('ms_username');
                 return username ? username : this.name;
-            },
+            }
         },
-        created(){
-            this.hasDefult()
-        },
+        created(){},
         methods:{
-            hasDefult(){
-                let boo = this.$store.state.hasSidebar
-                if(!boo) this.activeIndex = ''
-            },
-            handleSelect(key, keyPath) {
-                let _self = this
-                _self.$store.commit('fullscreen',true)
-            },
             goPage(page,boo){
                 let _self = this
-                _self.$store.commit('fullscreen',boo)
-                _self.hasDefult()
                 _self.$router.replace({path:page})
             },
         },
-        mounted(){
-            
-        }
+        mounted(){}
     }
 </script>
 <style scoped lang="scss">

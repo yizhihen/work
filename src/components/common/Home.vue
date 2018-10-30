@@ -1,8 +1,8 @@
 <template>
     <div class="wrapper">
-        <v-head></v-head>
-        <v-sidebar></v-sidebar>
-        <div :class="['content-box',collapse ? 'content-collapse' : '',hasSidebar ? '': 'no--hasSidebar']">
+        <v-head :menu="menuName"></v-head>
+        <v-sidebar :submenu="submenuList" v-if="showSidebar"></v-sidebar>
+        <div :class="['content-box',collapse ? 'content-collapse' : '',showSidebar ? '': 'no--hasSidebar']">
             <v-tags v-if="false"></v-tags>
             <div class="content">
                 <transition name="move" mode="out-in">
@@ -20,6 +20,7 @@
 </template>
 
 <script>
+    import submenu from './menu.json'
     import vHead from './Header.vue';
     import vSidebar from './Sidebar.vue';
     import vTags from './Tags.vue';
@@ -30,14 +31,20 @@
                 tagsList: [],
                 collapse: false
             }
-        },        
+        },
         components:{
             vHead, vSidebar, vTags
         },
         computed : {
-            hasSidebar(){
-                return this.$store.state.hasSidebar
+            showSidebar(){
+                return this.$showSidebar(this)
             },
+            menuName(){
+                return this.$getMenu(this)
+            },
+            submenuList(){
+                return this.$getSubmenu(this,submenu)
+            }
         },
         created(){
             bus.$on('collapse', msg => {
@@ -51,19 +58,8 @@
                 }
                 this.tagsList = arr;
             })
-            this.hasSide()
         },
-        methods: {
-            hasSide(){
-                let _self = this
-                let path = _self.$route.path
-                if(path == '/personal' || path == '/mail' || path == '/message'){
-                    _self.$store.commit('fullscreen',false)
-                }else{
-                    _self.$store.commit('fullscreen',true)
-                }
-            }
-        }
+        methods: {}
     }
 </script>
 <style scoped>

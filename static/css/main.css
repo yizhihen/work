@@ -33,6 +33,9 @@ a {
 .main-color{
     color: #FB6E2E !important;
 }
+.danger-color{
+    color: #f56c6c;
+}
 .ellipsis{
     overflow: hidden;
     white-space: nowrap;

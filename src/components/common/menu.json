@@ -4,7 +4,7 @@
             [
                 {"index": "/operation/bulletin","title":"平台公告"},
                 {"index": "/operation/topic","title":"话题设置"},
-                {"index": "1-3","title":"话题内容审核","url": "/test"},
+                {"index": "/operation/topiccheck","title":"话题内容审核","url": "/test"},
                 {"index": "/operation/college","title":"学院设置","url": "/test"},
                 {"index": "/operation/articlemanage","title":"学院文章管理","url": "/test"},
                 {"index": "1-6","title":"违禁词管理","url": "/test"}
@@ -24,5 +24,9 @@
                 {"index": "/operation/ruleSetting","title":"促销规则设置","url": "/test"}
             ]
         }
+    ],
+    "product": [
+        {"index": "/product/Reviewprocess","icon": "","title": "审核流程控制"},
+        {"index": "/product","icon": "","title": "参数配置"}
     ]
 }

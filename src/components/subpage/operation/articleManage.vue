@@ -138,7 +138,7 @@ import VueEditor from '../../common/ue.vue'
             initialFrameWidth: '100%',
             initialFrameHeight: 400,
         },
-        activeName: 'second',
+        activeName: 'first',
         list: DATA.list,
         currentPage4: 4,
         // 弹窗数据

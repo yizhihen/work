@@ -1,33 +1,279 @@
 <!-- 促销规则设置 -->
 <template>
-    <div class="container">
+    <div class="container" id="ruleSetting">
         <el-tabs v-model="activeName" @tab-click="handleClick">
             <el-tab-pane label="促销活动设置" name="first">
-                <div class="top clearfix">
+                <div class="item-tab clearfix">
                     <div class="tag">
                         <el-tag type="warning">首次投标奖励</el-tag>
                     </div>
                     <i class="i-line"></i>
                     <div class="right-content">
-                        <el-form :model="param" label-width="80px">
-                            <el-form-item label="活动名称">
-                                <el-input v-model="param.name"></el-input>
+                        <el-form :inline="true" :model="param" label-width="120px">
+                            <el-form-item label="首次投标奖励：">
+                                <el-input
+                                placeholder="请输入内容"
+                                prefix-icon="el-icon-plus"
+                                v-model="param.name">
+                                    <template slot="append">%</template>
+                                </el-input>
                             </el-form-item>
-                            <el-form-item label="活动时间">
-                                <el-col :span="11">
-                                <el-date-picker type="date" placeholder="选择日期" v-model="param.date1" style="width: 100%;"></el-date-picker>
-                                </el-col>
-                                <el-col class="line" :span="2">-</el-col>
-                                <el-col :span="11">
-                                <el-time-picker type="fixed-time" placeholder="选择时间" v-model="param.date2" style="width: 100%;"></el-time-picker>
-                                </el-col>
+                            <span class="label-title c9">投标金额的百分比</span>
+                            <el-form-item label="">
+                                <el-input
+                                placeholder="请输入内容"
+                                v-model="param.name">
+                                    <template slot="append">元</template>
+                                </el-input>
                             </el-form-item>
+                            <span class="label-title c9">固定金额</span>
+                        </el-form>
+                        <el-form :inline="true" :model="param" label-width="120px">
+                            <el-form-item label="奖励上线：">
+                                <el-input
+                                placeholder="请输入内容"
+                                v-model="param.name">
+                                    <template slot="append">元</template>
+                                </el-input>
+                            </el-form-item>                            
+                        </el-form>
+                        <el-form :inline="true" :model="param" label-width="120px">
+                            <el-form-item label="活动时间：">
+                                <el-date-picker
+                                v-model="param.date"
+                                type="datetimerange"
+                                range-separator="至"
+                                start-placeholder="开始日期"
+                                end-placeholder="结束日期">
+                                </el-date-picker>
+                            </el-form-item>                            
                         </el-form>
                     </div>
                 </div>
+                <div class="item-tab clearfix">
+                    <div class="tag">
+                        <el-tag type="warning">投标金额抵现金</el-tag>
+                    </div>
+                    <i class="i-line"></i>
+                    <div class="tag">
+                        <el-tag>优享</el-tag>
+                    </div>
+                    <div class="right-content">
+                        <el-form :inline="true" :model="param" label-width="120px">
+                            <el-form-item label="促销利率：">
+                                <el-input
+                                placeholder="请输入内容"
+                                prefix-icon="el-icon-plus"
+                                v-model="param.name">
+                                    <template slot="append">%</template>
+                                </el-input>
+                            </el-form-item>                            
+                        </el-form>
+                        <el-form :inline="true" :model="param" label-width="120px">
+                            <el-form-item label="投标金额：">
+                                <el-input
+                                placeholder="请输入内容"
+                                v-model="param.name">
+                                    <template slot="append">元</template>
+                                </el-input>
+                            </el-form-item>
+                            <span style="line-height: 32px; padding-right: 10px;" class="c9">至</span>
+                            <el-form-item label="">
+                                <el-input
+                                placeholder="请输入内容"
+                                v-model="param.name">
+                                    <template slot="append">元</template>
+                                </el-input>
+                            </el-form-item>                           
+                        </el-form>
+                        <el-form :inline="true" :model="param" label-width="120px">
+                            <el-form-item label="活动时间：">
+                                <el-date-picker
+                                v-model="param.date"
+                                type="datetimerange"
+                                range-separator="至"
+                                start-placeholder="开始日期"
+                                end-placeholder="结束日期">
+                                </el-date-picker>
+                            </el-form-item>                            
+                        </el-form>
+                        <el-form :inline="true" :model="param" label-width="120px">
+                            <el-form-item label="参与次数：">
+                                <el-input
+                                placeholder="请输入内容"
+                                v-model="param.name"></el-input>
+                            </el-form-item>
+                            <span class="label-title c9">每位用户限制参与次数</span>
+                        </el-form>
+                    </div>
+                    <div class="tag">
+                        <el-tag>惠享</el-tag>
+                    </div>
+                    <div class="right-content">
+                        <el-form :inline="true" :model="param" label-width="120px">
+                            <el-form-item label="促销利率：">
+                                <el-input
+                                placeholder="请输入内容"
+                                prefix-icon="el-icon-plus"
+                                v-model="param.name">
+                                    <template slot="append">%</template>
+                                </el-input>
+                            </el-form-item>                            
+                        </el-form>
+                        <el-form :inline="true" :model="param" label-width="120px">
+                            <el-form-item label="投标金额：">
+                                <el-input
+                                placeholder="请输入内容"
+                                v-model="param.name">
+                                    <template slot="append">元</template>
+                                </el-input>
+                            </el-form-item>
+                            <span style="line-height: 32px; padding-right: 10px;" class="c9">至</span>
+                            <el-form-item label="">
+                                <el-input
+                                placeholder="请输入内容"
+                                v-model="param.name">
+                                    <template slot="append">元</template>
+                                </el-input>
+                            </el-form-item>                           
+                        </el-form>
+                        <el-form :inline="true" :model="param" label-width="120px">
+                            <el-form-item label="活动时间：">
+                                <el-date-picker
+                                v-model="param.date"
+                                type="datetimerange"
+                                range-separator="至"
+                                start-placeholder="开始日期"
+                                end-placeholder="结束日期">
+                                </el-date-picker>
+                            </el-form-item>                            
+                        </el-form>
+                        <el-form :inline="true" :model="param" label-width="120px">
+                            <el-form-item label="参与次数：">
+                                <el-input
+                                placeholder="请输入内容"
+                                v-model="param.name"></el-input>
+                            </el-form-item>
+                            <span class="label-title c9">每位用户限制参与次数</span>
+                        </el-form>
+                    </div>
+                    <div class="tag">
+                        <el-tag>企宝</el-tag>
+                    </div>
+                    <div class="right-content">
+                        <el-form :inline="true" :model="param" label-width="120px">
+                            <el-form-item label="促销利率：">
+                                <el-input
+                                placeholder="请输入内容"
+                                prefix-icon="el-icon-plus"
+                                v-model="param.name">
+                                    <template slot="append">%</template>
+                                </el-input>
+                            </el-form-item>                            
+                        </el-form>
+                        <el-form :inline="true" :model="param" label-width="120px">
+                            <el-form-item label="投标金额：">
+                                <el-input
+                                placeholder="请输入内容"
+                                v-model="param.name">
+                                    <template slot="append">元</template>
+                                </el-input>
+                            </el-form-item>
+                            <span style="line-height: 32px; padding-right: 10px;" class="c9">至</span>
+                            <el-form-item label="">
+                                <el-input
+                                placeholder="请输入内容"
+                                v-model="param.name">
+                                    <template slot="append">元</template>
+                                </el-input>
+                            </el-form-item>                           
+                        </el-form>
+                        <el-form :inline="true" :model="param" label-width="120px">
+                            <el-form-item label="活动时间：">
+                                <el-date-picker
+                                v-model="param.date"
+                                type="datetimerange"
+                                range-separator="至"
+                                start-placeholder="开始日期"
+                                end-placeholder="结束日期">
+                                </el-date-picker>
+                            </el-form-item>                            
+                        </el-form>
+                        <el-form :inline="true" :model="param" label-width="120px">
+                            <el-form-item label="参与次数：">
+                                <el-input
+                                placeholder="请输入内容"
+                                v-model="param.name"></el-input>
+                            </el-form-item>
+                            <span class="label-title c9">每位用户限制参与次数</span>
+                        </el-form>
+                    </div>
+                </div>
+                <div class="btn-container">
+                    <el-button type="info">重置</el-button>
+                    <el-button type="success">保存</el-button>
+                </div>
             </el-tab-pane>
             <el-tab-pane label="邀请好友设置" name="second">
-                
+                <div class="item-tab clearfix">
+                    <div class="tag">
+                        <el-tag type="warning">邀请好友奖励设置</el-tag>
+                    </div>
+                    <i class="i-line"></i>
+                    <div class="right-content">
+                        <el-form :inline="true" :model="param" label-width="120px" class="radio-form">
+                            <el-form-item label="奖励模式：">
+                            <el-radio-group v-model="param.name">
+                                <el-radio label="投标后发放"></el-radio>
+                                <el-radio label="注册成功发放"></el-radio>
+                            </el-radio-group>
+                            </el-form-item>
+                        </el-form>
+                        <el-form :inline="true" :model="param" label-width="120px">
+                            <el-form-item label="邀请奖励：">
+                                <el-input
+                                placeholder="请输入内容"
+                                prefix-icon="el-icon-plus"
+                                v-model="param.name">
+                                    <template slot="append">%</template>
+                                </el-input>
+                            </el-form-item>
+                            <span class="label-title c9">被邀请人投标金额的百分比；</span>
+                            <el-form-item label="">
+                                <el-input
+                                placeholder="请输入内容"
+                                v-model="param.name">
+                                    <template slot="append">元</template>
+                                </el-input>
+                            </el-form-item>
+                            <span class="label-title c9">固定金额</span>
+                        </el-form>
+                        <el-form :inline="true" :model="param" label-width="120px">
+                            <el-form-item label="奖励上线：">
+                                <el-input
+                                placeholder="请输入内容"
+                                v-model="param.name">
+                                    <template slot="append">元</template>
+                                </el-input>
+                            </el-form-item>                            
+                        </el-form>
+                        <el-form :inline="true" :model="param" label-width="120px">
+                            <el-form-item label="活动时间：">
+                                <el-date-picker
+                                v-model="param.date"
+                                type="datetimerange"
+                                range-separator="至"
+                                start-placeholder="开始日期"
+                                end-placeholder="结束日期">
+                                </el-date-picker>
+                            </el-form-item>                            
+                        </el-form>
+                    </div>
+                </div>
+                <div class="btn-container">
+                    <el-button type="info">重置</el-button>
+                    <el-button type="success">保存</el-button>
+                </div>
             </el-tab-pane>
         </el-tabs>        
     </div>
@@ -39,13 +285,7 @@
         activeName: 'first',
         param: {
           name: '',
-          region: '',
-          date1: '',
-          date2: '',
-          delivery: false,
-          type: [],
-          resource: '',
-          desc: ''
+          date: ["", ""],
         }
       };
     },
@@ -54,7 +294,6 @@
     },
     methods: {
         handleClick(tab, event) {
-        // console.log(tab, event);
         console.log('切换了')
         },        
     }
@@ -71,8 +310,19 @@
 .tag{
     margin-bottom: 15px;
 }
+.item-tab{
+    margin-bottom: 15px;
+}
 .right-content{
-    // margin-left: 80px;
     font-size: 14px;
+    .label-title{
+        line-height: 32px;
+        display: inline-block;
+        margin-right: 80px;
+    }
+}
+.btn-container{
+    margin-top: 15px;
+    text-align: center;
 }
 </style>

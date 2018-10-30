@@ -1,8 +1,8 @@
 <template>
-    <div class="sidebar" v-if="hasSidebar">
+    <div class="sidebar">
         <el-menu class="sidebar-el-menu" :default-active="onRoutes" background-color="#324157"
         text-color="#bfcbd9" active-text-color="#FB6E2E" :unique-opened="true" router>
-            <template v-for="item in items">
+            <template v-for="item in submenu">
                 <!-- 存在子菜单 -->
                 <template v-if="item.subs">
                     <el-submenu :index="item.index" :key="item.index">
@@ -27,24 +27,19 @@
 </template>
 
 <script>
-    import menu from './menu.json'
     export default {
+        props: {
+            submenu: Array
+        },
         data() {
-            return {
-                items: [],
-            }
+            return {}
         },
         computed:{
             onRoutes(){
                 return '/' + this.$route.path.replace('/','');
-            },
-            hasSidebar(){
-                return this.$store.state.hasSidebar
-            },
+            }
         },
-        created(){
-            this.items = menu.operation
-        }
+        created(){}
     }
 </script>
 
