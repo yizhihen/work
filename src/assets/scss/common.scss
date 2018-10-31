@@ -1,0 +1,36 @@
+.top-container{
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgb(225,225,225);
+    .align-content{
+        .title{
+            line-height: 28px;
+            font-size: 14px;
+            color: #666;
+            font-weight: normal;
+        }  
+        .align-content{
+            margin-left: 90px;
+            .item{
+                display: inline-block;
+                font-size: 14px;
+                padding: 5px 10px;
+                background: #F4F4F5;
+                border: 1px solid #E0E0E2;
+                color: #909399;
+                border-radius: 2px;
+                cursor: pointer;
+                transition: .2s;
+                margin: 0 8px 8px 0;
+                &.active{
+                    color: #fff;
+                    background: #F56C6C;
+                    border-color: #F56C6C;
+                }
+            }
+        }
+    }
+    .action-content{
+        padding-top: 15px;
+        border-top: 1px solid rgb(225,225,225);
+    }
+}
