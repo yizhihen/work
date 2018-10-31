@@ -46,10 +46,28 @@ let operation = [
       meta: { title: '产品介绍' }
     },
     {
+      //公司介绍
+      path: '/operation/companyprofile',
+      component:  resolve => require(['@/components/subpage/operation/companyprofile.vue'], resolve),
+      meta: { title: '公司介绍' }
+    },
+    {
       //数据披露
       path: '/operation/dataDisclosure',
       component:  resolve => require(['@/components/subpage/operation/dataDisclosure.vue'], resolve),
       meta: { title: '数据披露' }
+    },
+    {
+      //常见问题
+      path: '/operation/problem',
+      component:  resolve => require(['@/components/subpage/operation/problem.vue'], resolve),
+      meta: { title: '常见问题' }
+    },
+    {
+      //促销列表
+      path: '/operation/rulelist',
+      component:  resolve => require(['@/components/subpage/operation/rulelist.vue'], resolve),
+      meta: { title: '促销列表' }
     },
     {
       //促销规则设置

@@ -19,16 +19,16 @@
         <div class="right-manage">
             <span class="item-container">
                 <el-badge class="item">
-                    <el-button type="text" @click="goPage('/personal',false)">个人中心</el-button>
+                    <el-button @click="goPage('/personal',false)" icon="iconfont icon-gerenzhongxin" circle></el-button>
                 </el-badge>
                 <el-badge :value="message" class="item">
-                    <el-button type="text" @click="goPage('/mail',false)">邮件</el-button>
+                    <el-button @click="goPage('/mail',false)" icon="iconfont icon-youjian2" circle></el-button>
                 </el-badge>
                 <el-badge :value="message" class="item">
-                    <el-button type="text" @click="goPage('/message',false)">消息</el-button>
+                    <el-button @click="goPage('/message',false)" icon="iconfont icon-xiaoxi" circle></el-button>
                 </el-badge>
             </span>            
-            <el-button type="text" icon="el-icon-star-off">退出登录</el-button>
+            <el-button type="" icon="iconfont icon-tuichu1" circle></el-button>
         </div>               
     </div>
 </template>

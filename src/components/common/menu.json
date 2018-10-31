@@ -15,13 +15,14 @@
                 [
                     {"index": "/operation/agreement","title":"合同&协议","url": "/test"},
                     {"index": "/operation/products","title":"产品介绍","url": "/test"},
-                    {"index": "2-3","title":"公司介绍","url": "/test"},
+                    {"index": "/operation/companyprofile","title":"公司介绍","url": "/test"},
                     {"index": "/operation/dataDisclosure","title":"数据披露","url": "/test"},
-                    {"index": "2-5","title":"常见问题","url": "/test"}
+                    {"index": "/operation/problem","title":"常见问题","url": "/test"}
                 ]
             },
             {"index": "3","icon": "icon-cuxiaoguanli","title": "促销统计","subs": 
                 [
+                    {"index": "/operation/rulelist","title":"促销列表","url": "/test"},
                     {"index": "/operation/ruleSetting","title":"促销规则设置","url": "/test"}
                 ]
             }

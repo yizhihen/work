@@ -33,6 +33,22 @@
     padding: 5px 20px;
 }
 
+/* 运营管理 常见问题*/
+#problem .el-form-item--small .el-form-item__content{
+    width: 200px;
+}
+
+/* 运营管理 促销列表*/
+#rulelist .el-form-item--small .el-form-item__content{
+    width: 200px;
+}
+#rulelist .el-dialog{
+    width: 930px;
+}
+#rulelist .radio-form .el-form-item--small .el-form-item__content{
+    width: auto;
+}
+
 /* 运营管理 学院文章管理*/
 #articleManage .el-upload--text{
     width: 200px;

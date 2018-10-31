@@ -91,7 +91,6 @@ a {
 /* 新添加样式 */
 .container{
     min-width: 988px;
-    max-width: 1200px;
     margin: auto
 }
 

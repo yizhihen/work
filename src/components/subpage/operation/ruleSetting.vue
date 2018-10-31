@@ -56,57 +56,6 @@
                     </div>
                     <i class="i-line"></i>
                     <div class="tag">
-                        <el-tag>优享</el-tag>
-                    </div>
-                    <div class="right-content">
-                        <el-form :inline="true" :model="param" label-width="120px">
-                            <el-form-item label="促销利率：">
-                                <el-input
-                                placeholder="请输入内容"
-                                prefix-icon="el-icon-plus"
-                                v-model="param.name">
-                                    <template slot="append">%</template>
-                                </el-input>
-                            </el-form-item>                            
-                        </el-form>
-                        <el-form :inline="true" :model="param" label-width="120px">
-                            <el-form-item label="投标金额：">
-                                <el-input
-                                placeholder="请输入内容"
-                                v-model="param.name">
-                                    <template slot="append">元</template>
-                                </el-input>
-                            </el-form-item>
-                            <span style="line-height: 32px; padding-right: 10px;" class="c9">至</span>
-                            <el-form-item label="">
-                                <el-input
-                                placeholder="请输入内容"
-                                v-model="param.name">
-                                    <template slot="append">元</template>
-                                </el-input>
-                            </el-form-item>                           
-                        </el-form>
-                        <el-form :inline="true" :model="param" label-width="120px">
-                            <el-form-item label="活动时间：">
-                                <el-date-picker
-                                v-model="param.date"
-                                type="datetimerange"
-                                range-separator="至"
-                                start-placeholder="开始日期"
-                                end-placeholder="结束日期">
-                                </el-date-picker>
-                            </el-form-item>                            
-                        </el-form>
-                        <el-form :inline="true" :model="param" label-width="120px">
-                            <el-form-item label="参与次数：">
-                                <el-input
-                                placeholder="请输入内容"
-                                v-model="param.name"></el-input>
-                            </el-form-item>
-                            <span class="label-title c9">每位用户限制参与次数</span>
-                        </el-form>
-                    </div>
-                    <div class="tag">
                         <el-tag>惠享</el-tag>
                     </div>
                     <div class="right-content">
