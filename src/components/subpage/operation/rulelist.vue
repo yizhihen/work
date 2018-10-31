@@ -3,98 +3,94 @@
     <div class="container" id="rulelist">
         <el-tabs v-model="activeName" @tab-click="handleClick">
             <el-tab-pane v-for="(item,index) in tablist" :label="item.title" :name="item.name" :key="index">
-                <div>
-                    <div class="form-container">
-                        <el-form v-if="other.activeName == 'first'" :inline="true" :model="param1" class="demo-form-inline">
-                            <el-form-item label="活动状态：">
-                                <el-select v-model="param1.state" placeholder="">
-                                    <el-option v-for="(item,index) in optionsList" :key="index" :label="item.label" :value="item.value"></el-option>
-                                </el-select>
-                            </el-form-item>
-                            <el-form-item label="">
-                                <el-input v-model="param1.user" placeholder="可搜索姓名，手机号">
-                                    <el-button slot="append" icon="el-icon-search" @click="search"></el-button>
-                                </el-input>
-                            </el-form-item>
-                        </el-form>
-                        <el-form v-else :inline="true" :model="param2" class="demo-form-inline">
-                            <el-form-item label="活动状态：">
-                                <el-select v-model="param2.state" placeholder="">
-                                    <el-option v-for="(item,index) in optionsList" :key="index" :label="item.label" :value="item.value"></el-option>
-                                </el-select>
-                            </el-form-item>
-                            <el-form-item label="">
+                <div class="top-container">                        
+                    <div v-if="other.activeName == 'first'" class="align-content clearfix">
+                        <h4 class="title fl">活动状态：</h4>
+                        <div class="align-content">
+                            <span @click="other.state1 = item.state" v-for="(item,index) in stateList" :key="index" :class="['item', other.state1 == item.state ? 'active' : '']">{{item.name}}</span>                                
+                            <span class="item-search">
                                 <el-input v-model="param2.user" placeholder="可搜索姓名，手机号">
                                     <el-button slot="append" icon="el-icon-search" @click="search"></el-button>
                                 </el-input>
-                            </el-form-item>
-                        </el-form>
+                            </span>
+                        </div>
                     </div>
-                    <el-table
-                    :data="tableData"
-                    style="width: 100%"
-                    @sort-change="sort"
-                    >
-                    <el-table-column
-                    type="index"
-                    label="序列"
-                    width="80">
-                    </el-table-column>
-                    <el-table-column
-                    prop="title"
-                    label="活动名称"
-                    show-overflow-tooltip
-                    width="140">
-                    </el-table-column>
-                    <el-table-column
-                    prop="creatTime"
-                    label="活动创建时间"
-                    width="180">
-                    </el-table-column>
-                    <el-table-column
-                    prop="startTime"
-                    label="活动开始时间"
-                    sortable
-                    width="180">
-                    </el-table-column>
-                    <el-table-column
-                    prop="endTime"
-                    label="活动结束时间"
-                    sortable
-                    width="180">
-                    </el-table-column>
-                    <el-table-column
-                    label="活动状态"
-                    width="100">
-                        <template slot-scope="scope">
-                            <el-tag v-if="scope.row.state == 0" type="danger">已结束</el-tag>
-                            <el-tag v-if="scope.row.state == 1" type="success">运营中</el-tag>
-                            <el-tag v-if="scope.row.state == 2" type="info">未开始</el-tag>
-                        </template>
-                    </el-table-column>
-                    <el-table-column
-                    align="center"
-                    label="操作">
-                        <template slot-scope="scope">
-                            <!-- 
-                                不能提前开始
-                                不能重新开始
-                                只支持提前结束
-                             -->
-                            <el-button type="text" v-if="scope.row.state == 1">结束</el-button>
-                            <el-button type="text" @click="detail(scope.row)">详情</el-button>
-                        </template>
-                    </el-table-column>
-                    </el-table>
-                    <div class="page-container">
-                        <el-pagination
-                            @current-change="handleCurrentChange"
-                            :current-page="currentPage4"
-                            :page-size="10"
-                            layout="total, prev, pager, next, jumper"
-                            :total="400">
-                        </el-pagination>
+                    <div v-else class="align-content clearfix">
+                        <h4 class="title fl">活动状态：</h4>
+                        <div class="align-content">
+                            <span @click="other.state2 = item.state" v-for="(item,index) in stateList" :key="index" :class="['item', other.state2 == item.state ? 'active' : '']">{{item.name}}</span>                                
+                            <span class="item-search">
+                                <el-input v-model="param2.user" placeholder="可搜索姓名，手机号">
+                                    <el-button slot="append" icon="el-icon-search" @click="search"></el-button>
+                                </el-input>
+                            </span>
+                        </div>
                     </div>
+                </div>
+                <el-table
+                :data="tableData"
+                style="width: 100%"
+                @sort-change="sort"
+                >
+                <el-table-column
+                type="index"
+                label="序列"
+                width="80">
+                </el-table-column>
+                <el-table-column
+                prop="title"
+                label="活动名称"
+                show-overflow-tooltip
+                width="140">
+                </el-table-column>
+                <el-table-column
+                prop="creatTime"
+                label="活动创建时间"
+                width="180">
+                </el-table-column>
+                <el-table-column
+                prop="startTime"
+                label="活动开始时间"
+                sortable
+                width="180">
+                </el-table-column>
+                <el-table-column
+                prop="endTime"
+                label="活动结束时间"
+                sortable
+                width="180">
+                </el-table-column>
+                <el-table-column
+                label="活动状态"
+                width="100">
+                    <template slot-scope="scope">
+                        <el-tag v-if="scope.row.state == 0" type="danger">已结束</el-tag>
+                        <el-tag v-if="scope.row.state == 1" type="success">运营中</el-tag>
+                        <el-tag v-if="scope.row.state == 2" type="info">未开始</el-tag>
+                    </template>
+                </el-table-column>
+                <el-table-column
+                align="center"
+                label="操作">
+                    <template slot-scope="scope">
+                        <!-- 
+                            不能提前开始
+                            不能重新开始
+                            只支持提前结束
+                            -->
+                        <el-button type="text" v-if="scope.row.state == 1">结束</el-button>
+                        <el-button type="text" @click="detail(scope.row)">详情</el-button>
+                    </template>
+                </el-table-column>
+                </el-table>
+                <div class="page-container">
+                    <el-pagination
+                        @current-change="handleCurrentChange"
+                        :current-page="currentPage4"
+                        :page-size="10"
+                        layout="total, prev, pager, next, jumper"
+                        :total="400">
+                    </el-pagination>
                 </div>
             </el-tab-pane>
         </el-tabs>
@@ -268,7 +264,9 @@
         return {
                 activeName: 'first',
                 other: {
-                    activeName: 'first'
+                    activeName: 'first',
+                    state1: '1',
+                    state2: '1'
                 },
                 boo: {
                     showDetail: false
@@ -276,6 +274,12 @@
                 tablist: [
                     {title: "促销活动列表", name: "first"},
                     {title: "邀请活动列表", name: "second"}
+                ],
+                stateList: [
+                    {state: 1, name: "全部"},
+                    {state: 2, name: "未开始"},
+                    {state: 3, name: "进行中"},
+                    {state: 4, name: "已结束"}
                 ],
                 tableData: DATA.list,
                 currentPage4: 4,
@@ -367,6 +371,46 @@
         line-height: 32px;
         display: inline-block;
         margin-right: 80px;
+    }
+}
+.top-container{
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(225,225,225);
+    .align-content{
+        .title{
+            line-height: 28px;
+            font-size: 14px;
+            color: #666;
+            font-weight: normal;
+        }
+        .align-content{
+            margin-left: 90px;
+            .item{
+                display: inline-block;
+                font-size: 14px;
+                padding: 5px 10px;
+                background: #F4F4F5;
+                border: 1px solid #E0E0E2;
+                color: #909399;
+                border-radius: 2px;
+                cursor: pointer;
+                transition: .2s;
+                margin: 0 8px 8px 0;
+                &.active{
+                    color: #fff;
+                    background: #F56C6C;
+                    border-color: #F56C6C;
+                }
+            }
+            .item-search{
+                display: inline-block;
+                margin-top: -2px;
+            }
+        }
+    }
+    .action-content{
+        padding-top: 15px;
+        border-top: 1px solid rgb(225,225,225);
     }
 }
 </style>

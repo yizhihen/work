@@ -37,6 +37,9 @@
 #problem .el-form-item--small .el-form-item__content{
     width: 200px;
 }
+#problem .add-problem .el-form-item--small .el-form-item__content{
+    width: auto;
+}
 
 /* 运营管理 促销列表*/
 #rulelist .el-form-item--small .el-form-item__content{

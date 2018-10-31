@@ -48,5 +48,41 @@
             "title": "这是公告的标题", 
             "content": "这是公告的内容"
         }
+    ],
+    "options": [
+        {"value": "zhinan1","label": "指南1", "children": [
+            {"value": "zhinan11","label": "指南11"},
+            {"value": "zhinan12","label": "指南12"},
+            {"value": "zhinan13","label": "指南13"},
+            {"value": "zhinan14","label": "指南14"}
+        ]},
+        {"value": "zhinan2","label": "指南2", "children": [
+            {"value": "zhinan21","label": "指南21"},
+            {"value": "zhinan22","label": "指南22"},
+            {"value": "zhinan23","label": "指南23"},
+            {"value": "zhinan24","label": "指南24"}
+        ]},
+        {"value": "zhinan3","label": "指南3", "children": [
+            {"value": "zhinan31","label": "指南31"},
+            {"value": "zhinan32","label": "指南32"},
+            {"value": "zhinan33","label": "指南33"},
+            {"value": "zhinan34","label": "指南34"}
+        ]},
+        {"value": "zhinan4","label": "指南4", "children": [
+            {"value": "zhinan41","label": "指南41"},
+            {"value": "zhinan42","label": "指南42"},
+            {"value": "zhinan43","label": "指南43"},
+            {"value": "zhinan44","label": "指南44"}
+        ]}
+    ],
+    "classList": [
+        {"id": 1, "num": "AD132456", "class": "一级问题1", "type": "二级问题11", "isEdit": false},        
+        {"id": 2, "num": "AD132456", "class": "一级问题1", "type": "二级问题12", "isEdit": false},        
+        {"id": 3, "num": "AD132456", "class": "一级问题1", "type": "二级问题13", "isEdit": false},        
+        {"id": 4, "num": "AD132456", "class": "一级问题2", "type": "二级问题21", "isEdit": false},        
+        {"id": 5, "num": "AD132456", "class": "一级问题2", "type": "二级问题22", "isEdit": false},        
+        {"id": 6, "num": "AD132456", "class": "一级问题2", "type": "二级问题23", "isEdit": false},        
+        {"id": 7, "num": "AD132456", "class": "一级问题3", "type": "二级问题31", "isEdit": false},        
+        {"id": 8, "num": "AD132456", "class": "一级问题4", "type": "二级问题41", "isEdit": false}
     ]
 }

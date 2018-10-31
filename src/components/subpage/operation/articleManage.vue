@@ -3,24 +3,25 @@
     <div class="container" id="articleManage">
         <el-tabs v-model="activeName" @tab-click="handleClick">
             <el-tab-pane label="文章管理" name="first">
-                <el-form :inline="true" :model="arg" class="demo-form-inline">
-                    <el-form-item label="分类：">
-                        <el-select v-model="arg.class" placeholder="">
-                        <el-option label="全部" value=""></el-option>
-                        <el-option label="新闻" value="1"></el-option>
-                        <el-option label="资讯" value="2"></el-option>
-                        <el-option label="教学" value="3"></el-option>
-                        </el-select>
-                    </el-form-item>
-                    <el-form-item label="状态：">
-                        <el-select v-model="arg.state" placeholder="">
-                        <el-option label="全部" value=""></el-option>
-                        <el-option label="已发布" value="1"></el-option>
-                        <el-option label="已下架" value="2"></el-option>
-                        <el-option label="草稿" value="3"></el-option>
-                        </el-select>
-                    </el-form-item>
-                </el-form>
+                <div class="top-container">                        
+                    <div class="align-content clearfix">
+                        <h4 class="title fl">分类：</h4>
+                        <div class="align-content">
+                            <span class="item active">全部</span>
+                            <span class="item">新闻</span>
+                            <span class="item">资讯</span>
+                        </div>
+                    </div>
+                    <div class="align-content clearfix">
+                        <h4 class="title fl">状态：</h4>
+                        <div class="align-content">
+                            <span class="item active">全部</span>
+                            <span class="item">已发布</span>
+                            <span class="item">已下架</span>
+                            <span class="item">草稿</span>
+                        </div>
+                    </div>
+                </div>
                 <el-table
                 :data="list"
                 style="width: 100%">
@@ -258,5 +259,42 @@ import VueEditor from '../../common/ue.vue'
 .btn-container{
     padding: 15px 0;
     text-align: center;
+}
+
+.top-container{
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgb(225,225,225);
+    .align-content{
+        .title{
+            line-height: 28px;
+            font-size: 14px;
+            color: #666;
+            font-weight: normal;
+        }
+        .align-content{
+            margin-left: 60px;
+            .item{
+                display: inline-block;
+                font-size: 14px;
+                padding: 5px 10px;
+                background: #F4F4F5;
+                border: 1px solid #E0E0E2;
+                color: #909399;
+                border-radius: 2px;
+                cursor: pointer;
+                transition: .2s;
+                margin: 0 8px 8px 0;
+                &.active{
+                    color: #fff;
+                    background: #F56C6C;
+                    border-color: #F56C6C;
+                }
+            }
+        }
+    }
+    .action-content{
+        padding-top: 15px;
+        border-top: 1px solid rgb(225,225,225);
+    }
 }
 </style>
