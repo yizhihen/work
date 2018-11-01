@@ -70,3 +70,13 @@
 #ruleSetting .radio-form .el-form-item--small .el-form-item__content{
     width: auto;
 }
+
+/* 权限管理 员工列表 */
+#new_staff .el-select>.el-input , #new_staff .el-date-editor.el-input{
+    width: 200px;
+}
+#new_staff .el-upload--text{
+    width: auto;
+    height: auto;
+    border: none;
+}

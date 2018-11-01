@@ -1,7 +1,7 @@
 <!-- 公司介绍 -->
 <template>
     <div class="container" id="rulelist">
-        <el-tabs v-model="activeName" @tab-click="handleClick">
+        <el-tabs v-model="other.activeName" @tab-click="handleClick">
             <el-tab-pane v-for="(item,index) in tablist" :label="item.title" :name="item.name" :key="index">
                 <div class="top-container">                        
                     <div v-if="other.activeName == 'first'" class="align-content clearfix">

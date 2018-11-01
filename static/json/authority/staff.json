@@ -1,0 +1,45 @@
+{
+    "list": [
+        {
+             "id": 1,
+             "num": "0001",
+             "name": "大锤",
+             "entryTime": "2018-10-26",
+             "days": "12",
+             "department": "前端开发部",
+             "officer": "前端开发工程师",
+             "state": "正常",
+             "authority": "开发权限"
+        },{
+            "id": 2,
+            "num": "0002",
+            "name": "大锤",
+            "entryTime": "2018-10-26",
+            "days": "12",
+            "department": "前端开发部",
+            "officer": "前端开发工程师",
+            "state": "停用",
+            "authority": "开发权限"
+       },{
+            "id": 3,
+            "num": "0003",
+            "name": "大锤",
+            "entryTime": "2018-10-26",
+            "days": "12",
+            "department": "前端开发部",
+            "officer": "前端开发工程师",
+            "state": "停用",
+            "authority": "开发权限"
+        },{
+            "id": 4,
+            "num": "0004",
+            "name": "大锤",
+            "entryTime": "2018-10-26",
+            "days": "12",
+            "department": "前端开发部",
+            "officer": "前端开发工程师",
+            "state": "正常",
+            "authority": "开发权限"
+        }
+    ]
+}
